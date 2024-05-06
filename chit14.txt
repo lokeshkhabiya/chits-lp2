@@ -1,0 +1,43 @@
+ 
+PS: Creating an Application in SalesForce.com using Apex programming Language
+
+Steps: 
+	1. Go to developer.salesforce.com/signup
+	2. Click on "Setup" and then click on "Developer console"
+	3. Click on file -> New -> Apex Class
+	4. Create a new apex class for example "Calculator"
+		a. On the console write basic code as
+		public class Calculator {
+    			public static Decimal add(Decimal num1, Decimal num2) {
+       				return num1 + num2;
+    			}	
+    
+   			public static Decimal subtract(Decimal num1, Decimal num2) {
+        			return num1 - num2;
+    			}
+    
+    			public static Decimal multiply(Decimal num1, Decimal num2) {
+        			return num1 * num2;
+    			}	
+    
+    			public static Decimal divide(Decimal num1, Decimal num2) {
+        			return num1 / num2;
+    			}	
+		}	
+	5. Save the file. Click on Debug -> Open Execute Anonymous Window or press control + E
+	6. Write the following code to debug your calculator code: 
+		Decimal result = Calculator.add(5, 3); // result = 8
+		Decimal result2 = Calculator.subtract(10, 4); // result2 = 6
+		Decimal result3 = Calculator.multiply(2, 6); // result3 = 12
+		Decimal result4 = Calculator.divide(20, 5); // result4 = 4
+
+		system.debug('Addition: '+ result);
+		system.debug('Subtraction: '+ result2);
+		system.debug('Multiplication: '+ result3);
+		system.debug('Division: '+ result4);
+	7. Check open log option and click on Execute.
+	8. On the log menu, click on debug only to see your output.
+
+
+
+

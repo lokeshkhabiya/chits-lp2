@@ -1,0 +1,19 @@
+
+- Steps for Installation and configure Google App Engine.
+
+1. Create a new project in cloud.google.com
+2. In terminal do the following steps: 
+	1. Update packages:
+		sudo apt-get update
+	2. Install apt-transport-https and curl:
+		sudo apt-get install apt-transport-https ca-certificates gnupg curl
+	3. Import the google cloud public key:
+		curl https://packages.cloud.google.com/apt/doc/apt-key.gpg/sudogpg-- dearmor -o /ust/share/keyrings/cloud.google.gpg
+	4. Add the geloud CLI distribution URI as a package source:
+		echo "deb [signed-by-/ust/share/keyrings/cloud.google.ggl] https://packages.cloud.google.com/aptcloud-sdk main"| sudo tee-a /etc/apt/sources.list.d/google-cloud-sdk.list
+	5. Update and install gcloud CLI
+		sudo apt-get update && sudo apt-get install google-cloud-cli
+	6. Add additional components: 
+		sudo apt-get install google-cloud-cli-app-engine-python
+	7. Run gcloud init to get started
+
